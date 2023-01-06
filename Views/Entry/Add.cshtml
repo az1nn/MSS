@@ -1,0 +1,24 @@
+@model MSS.Models.AddEntryViewModel
+
+<div class="text-left">
+    <h1 class="display-4 mb-3">Adicionar Entrada:</h1>
+    <form method="post" asp-action="Add" asp-controller="Entry">
+        <div class="mb-3">
+        <label for="productName" class="form-label">Selecione o produto:</label>
+        <select name="" id="" asp-for="SelectedProductId" asp-items="ViewBag.ProductsList"></select>
+    </div>
+        <div class="mb-3">
+            <label for="MadeBy" class="form-label">Quantidade:</label>
+            <input type="number" class="form-control" id="MadeBy" aria-describedby="MadeBy" asp-for="Quantity" required>
+        </div>
+        <div class="mb-3">
+            <label for="Type" class="form-label">Data:</label>
+            <input type="datetime-local" class="form-control" id="Type" aria-describedby="Type" asp-for="Date" required>
+        </div>
+        <div class="mb-3">
+            <label for="Description" class="form-label">Local:</label>
+            <input type="text" class="form-control" id="Description" aria-describedby="Description" asp-for="Local" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+    </form>
+</div>
